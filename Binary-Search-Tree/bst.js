@@ -2,12 +2,6 @@ function BinarySearchTree() {
     this.root = null
 }
 
-function NodeOfTree(val) {
-    this.left = null
-    this.val = val
-    this.right = null
-}
-
 BinarySearchTree.prototype.push = function(val) {
 
     //Root is not present, the tree is empty
