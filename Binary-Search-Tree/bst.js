@@ -73,14 +73,17 @@ BinarySearchTree.prototype.maxValue = function() {
 function inOrderTraversal(node) {
     if (node) {
         if (!node.root) {
-            inOrder(node.left)
-            console.log(node.val)
-            inOrder(node.right)
+            inOrderTraversal(node.left)
+            visitNode(node.val)
+            inOrderTraversal(node.right)
         } else {
-            inOrder(node.root.left)
-            console.log(node.root.val)
-            inOrder(node.root.right)
+            inOrderTraversal(node.root.left)
+            visitNode(node.root.val)
+            inOrderTraversal(node.root.right)
         }
     }
 }
 
+function visitNode(val) {
+    console.log(val)
+}
